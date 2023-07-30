@@ -16,7 +16,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'npm run build -- --prod'
+                bat 'npm run build -- --configuration=production'
             }
         }
 
@@ -32,6 +32,13 @@ pipeline {
             }
         }
 
+        stage('Deploy') {
+            steps {
+                // Add deployment steps here if applicable
+                // For example, deploying to a server or container
+                // You may need to install additional Jenkins plugins for deployment steps
+            }
+        }
     }
 
     post {
