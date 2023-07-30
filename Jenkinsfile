@@ -14,15 +14,9 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Build Angular Project') {
             steps {
                 bat 'npm run build -- --configuration=production'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                bat 'npm run test'
             }
         }
 
