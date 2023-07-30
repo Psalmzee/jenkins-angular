@@ -31,14 +31,6 @@ pipeline {
                 archiveArtifacts(artifacts: 'dist/**') // This will archive all files in the 'dist' directory as the build artifact
             }
         }
-
-        stage('Deploy') {
-            steps {
-                // Add deployment steps here if applicable
-                // For example, deploying to a server or container
-                // You may need to install additional Jenkins plugins for deployment steps
-            }
-        }
     }
 
     post {
